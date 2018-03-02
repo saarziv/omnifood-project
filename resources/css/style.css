@@ -1,0 +1,341 @@
+/*
+------------------------------------------------------------
+SETUP
+------------------------------------------------------------
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+html {
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
+    margin : 0;
+}
+
+.clear-fix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+/*
+------------------------------------------------------------
+REUSABLE COMPONENTS
+------------------------------------------------------------
+*/
+
+.row {
+    /*the value is in px because :
+    first the max-width property means that no matter the size of the screen , the .row elements maximum width will reach 1140px , if the screen is smaller than 1140 px then .row width will be 100% of its 
+        parent element (if its applied to a block level element).
+        if the screen width is larger than 1140px, the.row width will stop at 1140px.
+    
+    the reason we use px in this case and not percentages is , we apply the class on div`s(block level) , and if we would say something like 100% , it will be meanigless and there will be no constraint on the width of the div.
+    so the use of px in this case does not hurt responsivity of the website (larger screens would stop on 1140px , and smaller screens will simply use 100% of the parent element width.)
+    */
+    max-width: 1140px; 
+    /*zero margin top and bottme , auto right and left.    */
+    margin: 0 auto;
+    
+}
+
+/*
+HEADINGS
+*/
+
+h1,h2,h3 {
+    
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+h1 {
+    /*its best to use percentages for font-sizes.*/
+    font-size: 240%;
+    color:#fff;
+    /*very readable and astetic.*/
+    word-spacing: 4px;
+    /*since the default h1 font-weight is -bold which is eq to something like 700/800 its better to change the fontweight to a smaller number when the font size is big.*/
+    
+}
+h2 {
+    text-align: center;
+    font-size: 170%;
+}
+h3{
+    font-size: 110%;
+    margin-top: 10px;
+}
+
+/*creates an element after the h2 tag.*/
+h2:after {
+    display: block;
+    border-bottom: 2px solid #e67e22;
+    /*must put the content otherwise the element will not show.*/
+    content: " ";
+    width:100px;
+    margin: 20px auto;
+}
+
+section {
+    padding: 40px;
+}
+
+/*
+BUTTONS
+*/
+
+.btn:link,
+.btn:visited {
+    /*we use inline block because its best when wanting to add argin,padding,width,height to inline elements (more on this in summary.)*/
+    display: inline-block;
+    padding: 10px 30px;
+    margin-right: 15px;
+    border-radius: 200px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+.btn:hover,
+.btn:active {
+   background-color: #cf6d17;
+}
+
+
+.btn-full:hover,
+.btn-full:active {
+   border: 1px solid #cf6d17;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #cf6d17;
+    color: #fff;
+}
+
+
+/*
+------------------------------------------------------------
+HEADER
+------------------------------------------------------------
+*/
+header {
+    /*linear-gradient is a functionality that lets us paint two colors in one image in a nice way (although here we are making it with one clolr it still looks nice).    
+      we make a black background with 70% transperacy , and then we put an image as the background of the header element.
+    */
+    background: linear-gradient(rgba(3, 3, 3, 0.7),rgba(3, 3, 3, 0.7)), url(img/hero.jpg);
+    /*vh = stands for view height -  first view port = the area in the webpafe that is visible to the user (if it a phone it is smaller)
+    vh = 100% of the viewport when regarding to hight (for ex if we would have used 10% it would have been 10% of the view port hight.)
+    */
+    height: 100vh;
+    /*this means that the image will be covered as far as it can on the area it was placed on(the div - in this case the header tag) (without streaching the image and hurting its resulotion.)    */
+    background-size: cover;
+}
+
+.hero-text-box {
+    position: absolute;
+    /*giving the text-box div a width of a row. (which will impact the location of the text when positioning its horizantlay (because the div is wider.)) */
+    width: 1140px;
+    top:50%;
+    left: 50%;
+    /*taking half of the elements width(570px) and half of its height(100vh) up and to the left.*/
+    transform: translate(-50%,-50%);
+}
+
+/*
+------------------------------------------------------------
+NAV BAR
+------------------------------------------------------------
+*/
+
+.logo {
+    height: 170px;
+    width: auto;
+    margin-top: 15px;
+}
+
+.nav-main {
+    float: right;
+}
+.nav-main li {
+    display: inline-block;
+    margin: 50px 0 0 50px;
+}
+
+.nav-main a:link,
+.nav-main a:visited {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 6px;
+    border-bottom: 1px solid #e67e22 transperent;
+    transition: border-bottom 0.2s;
+    font-size: 90%;
+}
+
+.nav-main a:hover,
+.nav-main a:active {
+    border-bottom: 1px solid #e67e22;
+}
+/*
+------------------------------------------------------------
+MEALS
+------------------------------------------------------------    
+*/
+
+.meals-section {
+    padding: 0;
+}
+.meals-section ul {
+    width:100%;
+}
+.meals-section li {
+    list-style: none;
+    /*in-order to layout the photos - notice that i must remove whitespace in html.*/
+    float: left;
+    width: 25%;
+    
+}
+
+.meal-figure {
+    background-color: #000;
+    /*hidding the image overflow that is rulsted due the scale.*/
+    overflow: hidden;
+}
+
+.meal-figure img {
+    width:100%;
+    height: auto;
+    /*makes the img zoom in 1.15 times. (what can make the image overflow its container)*/
+    transform: scale(1.15);
+    /*is the (hebrew - shkifut) of the image - so with this we can see the black background color*/
+    opacity: 0.7;
+    transition: opacitiy 0.5s, transform 0.5s;
+}
+
+.meal-figure img:hover {
+    /*hidding the black background makes a brighter effect */
+    opacity: 1;
+    /*unzooming on hover.*/
+    transform: scale(1);
+}
+
+/*
+------------------------------------------------------------
+How it works
+------------------------------------------------------------
+*/
+
+.steps li {
+    margin-bottom: 5%;
+}
+.steps {
+    list-style:none;
+    display: inline-block;
+    margin-left: 5%;
+    margin-top: 10%
+}
+.how-it-works .row:last-child {
+    margin-top: 30px;
+}
+
+/*
+------------------------------------------------------------
+PARAGRAPHS
+------------------------------------------------------------
+*/
+.long-copy {
+    /*the hight of the line (simply pulls the hight to be higher..)    */
+    line-height: 145%;
+    /*centering text INSIDE the paragraph*/
+    text-align: center;
+    /*making the width of block element shorter and when it does that it makes all the rows in the paragraph shorter    */
+    width :75%;
+    /*center the paragraph because :when using margin left of 15% and the width 70% akk the remaining margin-right must be 15% - and thats how this line centeres the paragraph    */
+    margin-left: 15%;
+    /*BTW this would also work :margin:0 auto    */
+    font-size: 110%;
+    margin-bottom: 30px;
+}
+.box {
+    font-size: 90%; 
+    padding: 1%;
+}
+
+/*
+------------------------------------------------------------
+LOGO
+------------------------------------------------------------
+*/
+.big-logo {
+    font-size: 350%;
+    color:#e67e22;
+    
+}
+
+
+
+
+
+.iphone {
+    width:40%;
+/*    float:right;*/
+    margin-left:55%
+}
+
+
+.number {
+    color: #e67e22; 
+    border: 1px solid #e67e22;
+    padding: 15px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 20px;
+    display: inline-block;
+    float: left;
+    
+}
+
+.smart-phone-downloads {
+    margin-top:13%;
+    margin-left: 5%;
+    
+}
+
+.android-google-play {
+    height: 50px;
+    width: auto;
+}
+
+.iphone-appstore {
+    height: 50px
+}
