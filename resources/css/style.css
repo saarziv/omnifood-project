@@ -255,18 +255,86 @@ How it works
 ------------------------------------------------------------
 */
 
-.steps li {
-    margin-bottom: 5%;
+.how-it-works {
+    background-color: #f4f4f4;
 }
 .steps {
-    list-style:none;
     display: inline-block;
     margin-left: 5%;
-    margin-top: 10%
+    margin-top: 10%;
+        
 }
 .how-it-works .row:last-child {
     margin-top: 30px;
 }
+
+.iphone {
+    width:40%;
+}
+.steps-box:first-child {
+    text-align: right;
+    padding-right: 3%;
+}
+.work-step {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.number {
+    color: #e67e22; 
+    border: 2px solid #e67e22;
+    padding: 15px;
+    font-size: 150%;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+    border-radius: 50%;
+    margin-right: 20px;
+    display: inline-block;
+    float: left;
+    
+}
+/*
+------------------------------------------------------------
+CITIES
+------------------------------------------------------------
+*/
+
+.city-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    
+}
+.cities-logo {
+/*    display: inline-block;*/
+    color: #e67e22;
+    display: inline-block;
+    font-size: 120%;
+    margin:-5px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.cities-link:link,
+.cities-link:visited {
+    text-decoration: none;
+    border-bottom: 1px solid #e67e22;
+    color: #e67e22;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+.cities-link:hover,
+.cities-link:active {
+    border-bottom: 1px solid #555;
+    color: #555;
+}
+
+.city {
+    margin-left: 1000px;
+    
+}
+
 
 /*
 ------------------------------------------------------------
@@ -302,29 +370,6 @@ LOGO
     
 }
 
-
-
-
-
-.iphone {
-    width:40%;
-/*    float:right;*/
-    margin-left:55%
-}
-
-
-.number {
-    color: #e67e22; 
-    border: 1px solid #e67e22;
-    padding: 15px;
-    text-align: center;
-    border-radius: 50%;
-    margin-right: 20px;
-    display: inline-block;
-    float: left;
-    
-}
-
 .smart-phone-downloads {
     margin-top:13%;
     margin-left: 5%;
@@ -337,5 +382,11 @@ LOGO
 }
 
 .iphone-appstore {
-    height: 50px
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.steps-box {
+    text-align: 
 }
