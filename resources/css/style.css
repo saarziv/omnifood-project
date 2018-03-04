@@ -457,7 +457,7 @@ CONTACT FORM
 input[type=text],input[type=email],select,textarea {
     padding: 7px;
     border-radius: 3px;
-    width: 100%;
+    width: 80%;
 } 
 input[type=checkbox] {
     margin:10px 5px 10px 0px;
@@ -465,6 +465,92 @@ input[type=checkbox] {
 *:focus {
     outline: none;
 }
+
+/*
+------------------------------------------------------------
+FOOTER
+------------------------------------------------------------
+*/
+footer {
+    background-color: #313131;
+    padding: 40px; 
+    color: #797979;
+    font-size: 80%
+}
+footer a {
+    text-decoration: none;
+    color: #797979;
+}
+footer li {
+    display: inline-block;
+    text-decoration: none;
+    margin-right:  20px;
+/*    background-color: red;*/
+}
+
+footer p {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-nav {
+    float: left;
+    text-decoration: none;
+}
+.footer-nav li:last-child {
+    margin:0;
+}
+.footer-nav a {
+    transition: color 0.2s;
+}
+.footer-nav a:hover,
+.footer-nav a:active  {
+    color: #fff;
+}
+
+.footer-nav-social {
+    float: right;
+    font-size: 160%;
+}
+
+.footer-nav-social li:last-child {
+    margin: 0;
+}
+
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus, 
+.ion-social-instagram {
+    transition: color 0.2s;
+}
+
+.footer-nav-social ,
+.footer-nav-social  {
+    transition: color 10s;
+}
+
+.footer-nav-social .ion-social-facebook:hover,
+.footer-nav-social .ion-social-facebook:active {
+    color: #3b5998;
+}
+.footer-nav-social .ion-social-twitter:hover,
+.footer-nav-social .ion-social-twitter:active {
+    color: #55acee;
+}
+.footer-nav-social .ion-social-googleplus:hover,
+.footer-nav-social .ion-social-googleplus:active{
+    color: #dd4b39;
+}
+.footer-nav-social .ion-social-instagram:hover,
+.footer-nav-social .ion-social-instagram:active {
+    color: #458eff;
+}
+
+
+
+
+
 
 /*
 ------------------------------------------------------------
