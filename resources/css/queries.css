@@ -1,0 +1,120 @@
+
+/*big tablet(1024) to 1200px (width smaller then the 1140 px row)*/
+@media only screen and (max-width:1200px){
+    /*the css here will be applied only when the width of the screen size is between 1024-1200px    */
+    
+    .hero-text-box {
+    /*without this width 100% , the width is 1140px (like its defined in our styles.css file , so when we reach the 1200px scrren the width of the hero text box is starting to look bad , and if we take it down to 1088 the text is even starting to DISAPEAR ) therefore we use width 100% - to make the hero-text width responsive to the width of the screen , and this way the text wont disapear and will look nice.  (the hero-text-box is not inside a row)      */
+        width: 100%;
+        /*will keep the hero-text box away from the browser ends (like it looks like above 1200px)        */
+        padding: 0% 2%;
+    }
+    .row {
+        padding: 0% 2%;
+    }
+}
+
+
+
+/* small tablets to big tablets : 768-1023px*/
+@media only screen and (max-width:1023px) {
+    body {font-size: 15px;}
+    .hero-text-box,.row {padding: 0 2%;}
+    
+    /*to make the nav stay in the row.    */
+    .logo {height: 120px; }
+    .nav-main { font-size: 83%; }
+    
+    .long-copy {width: 80%;margin-left: 10%;}
+    
+    .work-step {margin-bottom: 25px}
+    .work-step:last-of-type{margin-bottom: 30px}
+    .steps-box {margin-top: 10px;}
+    .iphone {width: 50%}
+    .iphone-appstore {height: 40px;}
+    .android-google-play {height: 40px;}
+    
+    .cities-section .box p {font-size: 90%}
+    .cities-section .box a {font-size: 95%}
+    
+    .plan-box {
+        width: 100%;
+        margin-left: 1%;
+    }
+
+}
+
+
+/*bigger phones : 481px-767px  (768px is an ipad size)*/
+@media only screen and (max-width:767px) {
+    body {font-size: 16px;}
+    section {padding: 30px 0;}
+    
+    h1 {font-size: 180%}
+    h2 {font-size: 150%}
+    /*the more the screen width is smaller we want a bit more padding in order that the content wont be glued to the end of the screen.    */
+    .hero-text-box,.row {padding: 0 3%}
+    .row {width: 90%}
+    .col {width: 100%}
+    .logo {height: 80px}
+    /*useally for this screen size we hide it with displa:none . ,and with the help of jquery create a small phone navbar    */
+    .nav-main li {margin :60px 1px 0px 0px}
+    .nav-main li:last-of-type {margin-right: 0px;}
+    /*in this screen size its better to make every coloumn of top f each other.*/
+    
+    .long-copy {width:100%;margin:0}
+    
+    .steps-box:first-child{text-align: center;}
+    .iphone {width:40% }
+    .steps {margin-top:5px}
+    .work-step {margin-bottom: 15px}
+    .smart-phone-downloads{margin-top: 0}
+    .iphone-appstore {height: 50px;}
+    .android-google-play {height: 50px;}
+    
+    .city-img {height: 100px;width: 80%}
+    
+    cite { margin-top:10px;margin-bottom: 40px;}
+    cite:last-of-type {margin-bottom: 0}
+    blockquote {margin-top: 20px}
+    
+    
+    .box {margin-left: 0px;}
+    
+    .contact-form {width:100%;}
+
+    
+    
+}
+
+/*small phones : 0-480px - (old iphone)*/
+@media only screen and (max-width:480px) {
+    body { font-size: 13px}
+    section {padding: 25px 0}
+    
+    h1 {font-size: 150%;}
+    h2 {font-size: 120%;}
+    
+    .hero-text-box,.row {padding: 0 8%}
+    
+    .nav-main{display: none}
+    .logo {height: 150px;}
+    
+     .iphone-appstore {height: 38px;}
+    .android-google-play {height: 38px;}
+    
+    
+    input[type=text],input[type=email],select,textarea {
+        padding: 7px;
+        border-radius: 3px;
+        width: 80%;
+        margin:15px 0;
+    } 
+    input[type=checkbox] {
+        margin:15px 5px 15px 0px;
+    }
+    
+    
+    
+    
+}

@@ -2,13 +2,15 @@
 <html>
     <head>
         
-        
-        
+        <!--tells iphone to not zoom out - se scale 1.0 (regular) - and i think there is more to the :content="width=device-width        -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--using classes of this file for responsive web development.-->
         <link rel="stylesheet" href="vendor/css/Grid.css">
         <link rel="stylesheet" href="vendor/css/normalize.css">
+        <link rel="stylesheet" href="vendor/css/animate.css">
         <link rel="stylesheet" href="vendor/css/ionicons.min.css">
         <link rel="stylesheet" href="resources/css/style.css">
+        <link rel="stylesheet" href="resources/css/queries.css">
         <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400" rel="stylesheet">
     </head>
     
@@ -17,6 +19,7 @@
            <nav>
                <div class="row">
                    <img src="resources/css/img/logo-white.png" class="logo">
+                   <img src="resources/css/img/logo.png" class="logo-black">
                    <ul class="nav-main">
                         <li><a href="#">Food delivery</a></li>
                         <li><a href="#">How it works</a></li>
@@ -25,20 +28,18 @@
                    </ul>
                </div>
            </nav>
-            <div class="row">
-                <div class="hero-text-box">
+            <div class="hero-text-box">
                     <h1>Goodbye junk food.<br> Hello super healthy meals.</h1>
                     <a class="btn btn-full" href="#">I’m hungry</a>
                     <a class="btn btn-ghost" href="#">Show me more</a>
-                </div>
             </div>
         </header>
-        <section class="features">
+        <section class="features js--section--features">
             <div class="row">
                 <h2>Get food fast &mdash; not fast food</h2>
                 <p class="long-copy">Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that, we’re really good at it, we promise!</p>
             </div>
-            <div class="row">
+            <div class="row js--cols--features">
                 <div class="col span-1-of-4 box">
                     <i class="ion-ios-infinite-outline big-logo"></i>
                     <h3>Up to 365 days/year</h3>
@@ -113,7 +114,7 @@
             </div>
             <div class="row">
                    <div class="col span-1-of-2 steps-box">
-                        <img src="resources/css/img/app-iPhone.png" alt="iphone image of omnifood." class="iphone" />   
+                        <img src="resources/css/img/app-iPhone.png" alt="iphone image of omnifood." class="iphone js--iphone"/>   
                    </div>
                     <div class="col span-1-of-2 steps-box">
                         <div class="steps">
@@ -143,10 +144,10 @@
             <div class="row">
                 <h2>Wer`e currently in these cities</h2>
             </div>
-            <div class="row">
+            <div class="row js--cities">
                 <div class="col span-1-of-4 box">
-                    <img src="resources/css/img/lisbon-3.jpg" alt="image of lisbon city." class="city-img">   
-                    <h3>Lisbon</h3>
+                    <img src="resources/css/img/telaviv-img.jpeg" alt="image of Tel-aviv." class="city-img">   
+                    <h3>Tel Aviv</h3>
                     <p><i class="ion-person cities-logo"></i>1600+ happy eaters</p>
                     <p><i class="ion-android-star cities-logo"></i>60+ top chefs</p>
                     <i class="ion-social-twitter cities-logo"></i><a href="#" class="cities-link">@omnifood_lx</a>
@@ -211,7 +212,7 @@
             </div>
             <div class="row">
                     <div class="col span-1-of-3 box">
-                        <div class="plan-box">
+                        <div class="plan-box js--premium--plan">
                                 <div class="sign-up-plan">
                                     <h3>premium</h3>
                                     <span class="price">$399</span><span>/ month</span>
@@ -351,6 +352,9 @@
            </div>
         </footer>
     </body>
+    <script src="vendor/js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/js/jquery.waypoints.min.js"></script>
+    <script src="resources/js/script.js"></script>
 </html>
 <!--
 1. About us
