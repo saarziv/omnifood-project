@@ -12,6 +12,7 @@
     .row {
         padding: 0% 2%;
     }
+    .nav-main { font-size: 83%; display: block;}
 }
 
 
@@ -23,7 +24,7 @@
     
     /*to make the nav stay in the row.    */
     .logo {height: 120px; }
-    .nav-main { font-size: 83%; }
+    .nav-main { font-size: 83%; display: block;}
     
     .long-copy {width: 80%;margin-left: 10%;}
     
