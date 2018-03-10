@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         
         <!--tells iphone to not zoom out - se scale 1.0 (regular) - and i think there is more to the :content="width=device-width        -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--ths will be the description of our site when we search it in google - it is important to use good ketywords.-->
+        <meta name="description" content="Saar Omnifood project , this project helps me get better in html and css..">
         <!--using classes of this file for responsive web development.-->
         <link rel="stylesheet" href="vendor/css/Grid.css">
         <link rel="stylesheet" href="vendor/css/normalize.css">
@@ -12,14 +14,18 @@
         <link rel="stylesheet" href="resources/css/style.css">
         <link rel="stylesheet" href="resources/css/queries.css">
         <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400" rel="stylesheet">
+        <!--favicon-->
+        <link rel="icon" href="resources/favicon/favicon.ico" type="image/x-icon">
+        <title>Omnifood</title>
     </head>
     
     <body>
         <header>
            <nav>
                <div class="row">
-                   <img src="resources/css/img/logo-white.png" class="logo">
-                   <img src="resources/css/img/logo.png" class="logo-black">
+                   <img src="resources/css/img/logo-white.png" class="logo" alt="the logo of the regular navigation menu">
+                   <img src="resources/css/img/logo.png" class="logo-black" alt="the logo of the sticky navigation menu">
+                   <a class="phone-nav-icon js--phone--nav"><i class="ion-navicon-round"></i></a>
                    <ul class="nav-main">
                         <li><a href="#">Food delivery</a></li>
                         <li><a href="#">How it works</a></li>
@@ -252,7 +258,7 @@
                             <div class="sign-up-plan">
                                 <h3>Starter</h3>
                                 <span class="price">19$</span><span>/ meal</span>
-                                <p>&nbsp</p>    
+                                <p>&nbsp;/p>    
                             </div>
                             <ul class="plan-services">
                                 <li><i class="ion-ios-checkmark-empty"></i>1 meal</li>
@@ -314,7 +320,7 @@
                             <label for="name">Drop us a line</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <textarea name="" id="" cols="30" rows="4" placeholder="Your message here"></textarea>
+                            <textarea name="message" cols="30" rows="4" placeholder="Your message here"></textarea>
                         </div>
                     </div>
                       <div class="row">
@@ -351,15 +357,9 @@
                     <p>Copyright &copy; 2015 by Omnifood. All rights reserved.</p>
            </div>
         </footer>
+        <script src="vendor/js/jquery-3.3.1.min.js"></script>
+        <script src="vendor/js/jquery.waypoints.min.js"></script>
+        <script src="resources/js/script.js"></script>
     </body>
-    <script src="vendor/js/jquery-3.3.1.min.js"></script>
-    <script src="vendor/js/jquery.waypoints.min.js"></script>
-    <script src="resources/js/script.js"></script>
+    
 </html>
-<!--
-1. About us
-2. Blog
-3. Press
-4. iOS App
-5. Android App
--->

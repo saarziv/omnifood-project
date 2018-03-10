@@ -167,7 +167,7 @@ header {
     /*linear-gradient is a functionality that lets us paint two colors in one image in a nice way (although here we are making it with one clolr it still looks nice).    
       we make a black background with 70% transperacy , and then we put an image as the background of the header element.
     */
-    background: linear-gradient(rgba(3, 3, 3, 0.7),rgba(3, 3, 3, 0.7)), url(img/hero.jpg);
+    background: linear-gradient(rgba(3, 3, 3, 0.7),rgba(3, 3, 3, 0.7)), url(img/hero-min.jpg);
     background-attachment: fixed;
     /*vh = stands for view height -  first view port = the area in the webpafe that is visible to the user (if it a phone it is smaller)
     vh = 100% of the viewport when regarding to hight (for ex if we would have used 10% it would have been 10% of the view port hight.)
@@ -225,6 +225,12 @@ NAV BAR
 .nav-main a:active {
     border-bottom: 1px solid #e67e22;
 }
+.phone-nav-icon {
+    display: none;
+    float: right;
+    color: #fff;
+}
+
 
 /*
 ------------------------------------------------------------
@@ -265,8 +271,17 @@ sticky navi
 .logo-black {
     height: 50px;
 }
-
-
+/*
+------------------------------------------------------------
+mobile navi
+------------------------------------------------------------
+*/
+.phone-nav-icon {
+    font-size:200%;
+    margin: 35px 0;
+    padding: 10px;
+    cursor: pointer;
+}
 /*
 ------------------------------------------------------------
 MEALS
@@ -404,7 +419,7 @@ CUSTOMER-TESTIMONIALS
 */
 
 .customer-testimonials {
-    background : linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+    background : linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(img/back-customers-min.jpg);
     background-attachment: fixed;
     background-size: cover;
     color: #fff;

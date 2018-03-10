@@ -54,16 +54,35 @@
     h2 {font-size: 150%}
     /*the more the screen width is smaller we want a bit more padding in order that the content wont be glued to the end of the screen.    */
     .hero-text-box,.row {padding: 0 3%}
-    .row {width: 90%}
+    .row {width: 90%; position: relative;}
     .col {width: 100%}
-    .logo {height: 80px}
-    /*useally for this screen size we hide it with displa:none . ,and with the help of jquery create a small phone navbar    */
-    .nav-main li {margin :60px 1px 0px 0px}
-    .nav-main li:last-of-type {margin-right: 0px;}
-    /*in this screen size its better to make every coloumn of top f each other.*/
+    
+    /*hiding the main nav and making the phone-nav visible.    */
+    .logo {float: left}
+    .nav-main {float: left; display: none;}
+    .nav-main li {
+        display: block; 
+        margin: 40px 0px 0px 40px;
+        font-size: 130%;
+        /*cause there is no border on mobile*/
+        border: 0px;
+    }
+    .phone-nav-icon {display: inline-block; margin: 0px;}
+    
+    .sticky .logo-black {float: left;}
+    .sticky .phone-nav-icon {color: #555;}
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     .long-copy {width:100%;margin:0}
-    
+        
     .steps-box:first-child{text-align: center;}
     .iphone {width:40% }
     .steps {margin-top:5px}
@@ -71,8 +90,6 @@
     .smart-phone-downloads{margin-top: 0}
     .iphone-appstore {height: 50px;}
     .android-google-play {height: 50px;}
-    
-    .city-img {height: 100px;width: 80%}
     
     cite { margin-top:10px;margin-bottom: 40px;}
     cite:last-of-type {margin-bottom: 0}

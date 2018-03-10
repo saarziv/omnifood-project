@@ -37,6 +37,25 @@ $( document ).ready(function (){
     animationBuilder('js--cities','animated fadeIn','70%');
     animationBuilder('js--premium--plan','animated pulse','60%');
     
+    /*Click handler for the mobile nav icon.*/
+    $('.js--phone--nav').on('click', () => {
+        
+        let mainNav = $(".nav-main");
+        /*showing the main nav in an animated cool dropdown way.*/
+        mainNav.slideToggle(200);
+        
+        let icon = $('.js--phone--nav i');
+        if(icon.hasClass("ion-navicon-round")) {
+            
+            icon.removeClass("ion-navicon-round");
+            icon.addClass("ion-close-round");
+        } else {
+            icon.removeClass("ion-close-round");
+            icon.addClass("ion-navicon-round");
+        }
+        
+    })
+    
 });
 
 
